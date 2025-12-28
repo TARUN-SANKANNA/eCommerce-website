@@ -1,0 +1,13 @@
+.checkout {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+}
+.checkout {
+  background: rgba(255,255,255,0.2);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  animation: fade 0.6s ease;
+}

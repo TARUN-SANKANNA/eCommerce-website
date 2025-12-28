@@ -1,0 +1,148 @@
+/* PAGE */
+.order-details {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  color: #e5e7eb;
+  background: linear-gradient(135deg, #020617, #020617 60%, #020617);
+  border-radius: 20px;
+  box-shadow: 0 0 80px rgba(0, 255, 200, 0.05);
+  animation: fadeIn 0.6s ease;
+}
+
+/* STATUS BADGE */
+.status {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.status-pending {
+  background: #facc15;
+  color: #111;
+}
+
+.status-shipped {
+  background: #38bdf8;
+  color: #020617;
+}
+
+.status-delivered {
+  background: #22c55e;
+  color: #022c22;
+}
+
+/* TRACKING */
+.tracking-box {
+  margin: 25px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.track-step {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #334155;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.track-step.done {
+  border-left-color: #22c55e;
+  background: linear-gradient(
+    90deg,
+    rgba(34, 197, 94, 0.15),
+    rgba(34, 197, 94, 0.03)
+  );
+  box-shadow: 0 0 25px rgba(34, 197, 94, 0.25);
+}
+
+.track-step .check {
+  color: #22c55e;
+  font-size: 18px;
+  animation: pop 0.3s ease;
+}
+
+/* ADDRESS */
+.address-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 18px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+/* ITEMS */
+.items-box {
+  margin-top: 10px;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+}
+
+/* INVOICE BUTTON */
+.invoice-btn {
+  margin-top: 25px;
+  padding: 14px 22px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  color: #020617;
+  background: linear-gradient(90deg, #38bdf8, #22c55e);
+  box-shadow: 0 0 30px rgba(34, 197, 94, 0.5);
+  transition: 0.3s;
+}
+
+.invoice-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 45px rgba(34, 197, 94, 0.8);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .order-details {
+    padding: 20px;
+  }
+
+  .item-row {
+    flex-direction: column;
+    gap: 5px;
+  }
+}

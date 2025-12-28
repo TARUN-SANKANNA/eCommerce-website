@@ -1,0 +1,221 @@
+/* ===========================
+   Admin Orders – Glass UI
+=========================== */
+
+.admin-orders {
+  min-height: 100vh;
+  padding: 40px;
+  background: radial-gradient(circle at top, #020617, #020617 40%, #020617);
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+
+/* Title */
+.admin-orders h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, #38bdf8, #22c55e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Order Card */
+.order-card {
+  background: rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  animation: slideUp 0.6s ease forwards;
+  transition: 0.4s;
+}
+
+.order-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 0 50px rgba(56, 189, 248, 0.25);
+}
+
+/* Order Header */
+.order-card h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #38bdf8;
+}
+
+/* Order Text */
+.order-card p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #e5e7eb;
+}
+
+/* Assign box */
+.assign-box {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Input */
+.assign-box input {
+  flex: 1;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  color: white;
+  outline: none;
+  transition: .3s;
+}
+
+.assign-box input:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 12px #38bdf8;
+}
+
+/* Buttons */
+.assign-box button,
+.ship-btn {
+  padding: 12px 18px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: black;
+  background: linear-gradient(135deg, #38bdf8, #22c55e);
+  transition: 0.3s;
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+}
+
+.assign-box button:hover,
+.ship-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(56, 189, 248, 0.8);
+}
+
+/* Shipped label */
+.order-card p[style*="green"] {
+  color: #22c55e;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Card grid look */
+@media (min-width: 900px) {
+  .admin-orders {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    gap: 25px;
+  }
+
+  .admin-orders h2 {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+/* =========================
+   Status Badges
+========================= */
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: 10px;
+  animation: pulse 2s infinite;
+}
+
+/* Pending */
+.status-pending {
+  background: linear-gradient(90deg, #facc15, #f59e0b);
+  color: #000;
+  box-shadow: 0 0 15px rgba(250, 204, 21, 0.7);
+}
+
+/* Shipped */
+.status-shipped {
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+  color: #000;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.8);
+}
+
+/* Delivered */
+.status-delivered {
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  color: #000;
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.8);
+}
+
+/* Cancelled */
+.status-cancelled {
+  background: linear-gradient(90deg, #ef4444, #dc2626);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.8);
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+.status-pending {
+  background: gold;
+  color: black;
+}
+
+.status-shipped {
+  background: #38bdf8;
+  color: black;
+}
+
+.status-delivered {
+  background: #22c55e;
+  color: white;
+}
+
+.ship-btn {
+  background: linear-gradient(90deg,#38bdf8,#22c55e);
+  color: black;
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.deliver-btn {
+  background: #22c55e;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
