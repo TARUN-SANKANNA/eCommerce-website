@@ -140,13 +140,13 @@ Netlify Redirects:
 
 <br><br>
 
-##📄 License<br>
+## 📄 License<br>
 
 <h3>This project is open-source and free to use for learning and development.</h3>
 
 <br><br>
 
-##✨ Author
+## ✨ Author
 <h2>Tarun Sankanna</h2>
 <br><br>
 
